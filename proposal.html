@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Page</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ffe6e6, #ffd1dc, #ffb3c1);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .proposal-section {
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #ff6384;
+            margin-bottom: 20px;
+        }
+        .proposal-button {
+            background-color: #ff6384;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            margin: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .proposal-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        #popup img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 15px;
+        }
+        #popup button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #ff6384;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="proposal-section">
+        <h1>Will you be mine forever? ❤️</h1>
+        <button class="proposal-button" onclick="showPopup('yes')">Yes</button>
+        <button class="proposal-button" onclick="showPopup('ofc')">Of course, love you too!</button>
+    </div>
+
+    <div id="popup">
+        <img id="popup-img" src="" alt="Romantic Image">
+        <button onclick="hidePopup()">Close</button>
+    </div>
+
+    <script>
+        function showPopup(choice) {
+            const popup = document.getElementById('popup');
+            const popupImg = document.getElementById('popup-img');
+
+            // Update the image URL based on the button clicked
+            if (choice === 'yes') {
+                popupImg.src = 'C:\Users\Aman Raj\Downloads\KBHI NI\You Are Mine Forever.jpeg'; // Placeholder image, replace with your image URL
+            } else if (choice === 'ofc') {
+                popupImg.src = 'C:\Users\Aman Raj\Downloads\KBHI NI\You Are Mine Forever.jpeg'; // Another placeholder image
+            }
+
+            popup.style.display = 'block';
+        }
+
+        function hidePopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
